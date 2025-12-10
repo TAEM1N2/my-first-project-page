@@ -46,8 +46,6 @@ if its decimal can be written down by a machine...
 
 # Introduction
 
----
-
 - The rocket landing problem is formulated as an optimal control problem, where the goal is to achieve a soft landing at a specified terminal state while minimizing fuel consumption.
 - Instead of integrating the continuous-time ODE directly, the trajectory is computed through a direct transcription approach.
 - The continuous optimal control problem is converted into a finite-dimensional nonlinear programming (NLP) problem, solved using MATLAB’s *fmincon* with an SQP algorithm.
@@ -55,15 +53,11 @@ if its decimal can be written down by a machine...
 
 # Mathematical Formulation
 
----
-
 ![Screenshot from 2025-12-10 00-51-34.png](Optimal%20Control%20Theory%20Project/Screenshot_from_2025-12-10_00-51-34.png)
 
 ![Screenshot from 2025-12-10 00-52-14.png](Optimal%20Control%20Theory%20Project/Screenshot_from_2025-12-10_00-52-14.png)
 
 # Direct Collocation Method
-
----
 
  
 
@@ -204,8 +198,6 @@ if its decimal can be written down by a machine...
 
 # Conclusion
 
----
-
 - Initial formulations that only maximized final mass produced mathematically feasible but physically unrealistic behaviors, highlighting the need for additional constraints.
 - Introducing penalties on thrust-rate and angle-rate reduced discontinuities in the control signals and improved physical plausibility.
 - Adding a terminal constraint on vertical acceleration enabled a smoother touchdown and eliminated excessive downward velocity at landing.
@@ -220,8 +212,6 @@ if its decimal can be written down by a machine...
 - Adding physically motivated penalties or constraints significantly reduces the feasible search space, steering the optimizer to desirable solutions.
 
 # Limitations and Constraints
-
----
 
 - Because the problem is formulated with a fixed final time, the resulting trajectory does not necessarily represent a minimum-time landing.
 - The computed solution focuses primarily on fuel efficiency under the prescribed time horizon, rather than exploiting shorter-duration descent strategies.
